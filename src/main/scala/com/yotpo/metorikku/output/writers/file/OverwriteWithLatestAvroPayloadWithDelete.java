@@ -3,11 +3,12 @@ package com.yotpo.metorikku.output.writers.file;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.generic.IndexedRecord;
+import org.apache.hudi.common.model.OverwriteWithLatestAvroPayload;
 import org.apache.hudi.common.util.Option;
 
 import java.io.IOException;
 
-public class OverwriteWithLatestAvroPayloadWithDelete extends org.apache.hudi.OverwriteWithLatestAvroPayload {
+public class OverwriteWithLatestAvroPayloadWithDelete extends OverwriteWithLatestAvroPayload {
     private GenericRecord record;
 
     public OverwriteWithLatestAvroPayloadWithDelete(GenericRecord record, Comparable orderingVal) {
